@@ -1,0 +1,626 @@
+
+<dict>
+	cocos2d.x.version: quick-cocos2d-x 2.2.5
+	cocos2d.x.compiled_with_profiler: false
+	cocos2d.x.compiled_with_gl_state_cache: true
+	gl.vendor: Intel
+	gl.renderer: Intel(R) HD Graphics 4400
+	gl.version: 4.3.0 - Build 20.19.15.4568
+	gl.max_texture_size: 16384
+	gl.max_texture_units: 192
+	gl.supports_PVRTC: false
+	gl.supports_NPOT: true
+	gl.supports_BGRA8888: false
+	gl.supports_discard_framebuffer: false
+	gl.supports_vertex_array_object: true
+</dict>
+lua_loadChunksFromZIP() - load zip file: D:\cocos2d-x\quick-cocos2d-x-2.2.5-release\lib\framework_precompiled\framework_precompiled.zip
+lua_loadChunksFromZIP() - loaded chunks count: 108
+------------------------------------------------
+LOAD LUA FILE: D:/cocos2d-x/LearnLuaGame/scripts/main.lua
+------------------------------------------------
+[0.3474] [INFO] 
+[0.3479] [INFO] # DEBUG                        = 1
+[0.3484] [INFO] #
+[0.3489] [INFO] # device.platform              = windows
+[0.3493] [INFO] # device.model                 = unknown
+[0.3501] [INFO] # device.language              = cn
+[0.3512] [INFO] # device.writablePath          = D:\cocos2d-x\LearnLuaGame\
+[0.3522] [INFO] # device.cachePath             = D:\cocos2d-x\LearnLuaGame\
+[0.3533] [INFO] # device.directorySeparator    = \
+[0.3609] [INFO] # device.pathSeparator         = ;
+[0.3619] [INFO] #
+[0.3669] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_HEIGHT
+[0.3674] [INFO] # CONFIG_SCREEN_WIDTH          = 1136.00
+[0.3683] [INFO] # CONFIG_SCREEN_HEIGHT         = 640.00
+[0.3693] [INFO] # display.widthInPixels        = 1136.00
+[0.3705] [INFO] # display.heightInPixels       = 640.00
+[0.3767] [INFO] # display.contentScaleFactor   = 1.00
+[0.3781] [INFO] # display.width                = 1136.00
+[0.3803] [INFO] # display.height               = 640.00
+[0.3814] [INFO] # display.cx                   = 568.00
+[0.3825] [INFO] # display.cy                   = 320.00
+[0.3835] [INFO] # display.left                 = 0.00
+[0.3845] [INFO] # display.right                = 1136.00
+[0.3855] [INFO] # display.top                  = 640.00
+[0.3865] [INFO] # display.bottom               = 0.00
+[0.3875] [INFO] # display.c_left               = -568.00
+[0.3893] [INFO] # display.c_right              = 568.00
+[0.3961] [INFO] # display.c_top                = 320.00
+[0.3975] [INFO] # display.c_bottom             = -320.00
+[0.3993] [INFO] #
+[2.8308] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[2.8345] [ERR] event clickScreen inappropriate in current state walk
+[2.8374] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[4.1568] self.canAttack = nil
+[4.1622] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[4.1643] [ERR] event clickScreen inappropriate in current state walk
+[4.1669] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[4.1887] self.canAttack = nil
+[4.2480] begin
+[4.2795] self.canAttack = true
+[4.2804] Enemy2:getCanAttack = true
+[4.2815] enemy:canAttack true
+[4.2828] Enemy2:getCanAttack = true
+[4.8130] self.canAttack = true
+[4.8149] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from idle to idle
+[4.8176] [ERR] event stop inappropriate in current state idle
+[4.8208] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:153: in function 'clickEnemy'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29>
+	[C]: in function 'postNotification'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:28: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:27>
+[4.8335] Enemy2:getCanAttack = true
+[4.8349] enemy:canAttack true
+[4.8370] Enemy2:getCanAttack = true
+[4.8887] self.canAttack = true
+[4.9200] self.canAttack = true
+[4.9221] self.canAttack = true
+[5.6735] self.canAttack = true
+[5.6760] Enemy2:getCanAttack = true
+[5.6789] enemy:canAttack true
+[5.6819] Enemy2:getCanAttack = true
+[5.6887] self.canAttack = true
+[5.7791] self.canAttack = true
+[5.7815] self.canAttack = true
+[6.0931] separate
+NOT FOUND BODY 08A82B38
+[6.3116] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[6.3129] [ERR] event clickScreen inappropriate in current state walk
+[6.3140] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[6.7188] EnemyDead
+[6.9069] self.canAttack = false
+[6.9129] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[6.9147] [ERR] event clickScreen inappropriate in current state walk
+[6.9173] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[6.9287] self.canAttack = false
+[6.9823] self.canAttack = false
+[7.0135] self.canAttack = false
+[7.0162] self.canAttack = false
+[7.4191] begin
+[7.5472] self.canAttack = true
+[7.5501] Enemy1:getCanAttack = true
+[7.5522] enemy:canAttack true
+[7.5553] Enemy1:getCanAttack = true
+[7.5636] self.canAttack = true
+[7.5954] self.canAttack = true
+[7.5983] self.canAttack = true
+[8.1608] self.canAttack = true
+[8.1632] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from idle to idle
+[8.1668] [ERR] event stop inappropriate in current state idle
+[8.1715] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:153: in function 'clickEnemy'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29>
+	[C]: in function 'postNotification'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy1.lua"]:28: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy1.lua"]:27>
+[8.1801] Enemy1:getCanAttack = true
+[8.1812] enemy:canAttack true
+[8.1824] Enemy1:getCanAttack = true
+[8.2678] self.canAttack = true
+[8.2736] self.canAttack = true
+[8.8319] self.canAttack = true
+[8.8338] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from idle to idle
+[8.8366] [ERR] event stop inappropriate in current state idle
+[8.8398] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:153: in function 'clickEnemy'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29>
+	[C]: in function 'postNotification'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy1.lua"]:28: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy1.lua"]:27>
+[8.8527] Enemy1:getCanAttack = true
+[8.8540] enemy:canAttack true
+[8.8561] Enemy1:getCanAttack = true
+[8.8918] self.canAttack = true
+[8.9229] self.canAttack = true
+[8.9251] self.canAttack = true
+[9.2678] separate
+NOT FOUND BODY 08A82438
+[9.7986] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[9.8000] [ERR] event clickScreen inappropriate in current state walk
+[9.8010] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[9.8920] EnemyDead
+[12.5825] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[12.5858] [ERR] event clickScreen inappropriate in current state walk
+[12.5890] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[13.3794] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[13.3827] [ERR] event clickScreen inappropriate in current state walk
+[13.3857] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[14.7076] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[14.7108] [ERR] event clickScreen inappropriate in current state walk
+[14.7140] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[15.3164] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[15.3196] [ERR] event clickScreen inappropriate in current state walk
+[15.3229] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[15.7695] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[15.7727] [ERR] event clickScreen inappropriate in current state walk
+[15.7759] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[16.0665] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[16.0697] [ERR] event clickScreen inappropriate in current state walk
+[16.0729] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[16.4567] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[16.4599] [ERR] event clickScreen inappropriate in current state walk
+[16.4630] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[16.8473] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[16.8506] [ERR] event clickScreen inappropriate in current state walk
+[16.8539] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[17.1753] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[17.1786] [ERR] event clickScreen inappropriate in current state walk
+[17.1816] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[17.7221] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[17.7254] [ERR] event clickScreen inappropriate in current state walk
+[17.7285] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[18.1731] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[18.1743] [ERR] event clickScreen inappropriate in current state walk
+[18.1757] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[18.5507] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[18.5540] [ERR] event clickScreen inappropriate in current state walk
+[18.5573] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[18.7854] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[18.7886] [ERR] event clickScreen inappropriate in current state walk
+[18.7918] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[19.1125] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[19.1157] [ERR] event clickScreen inappropriate in current state walk
+[19.1189] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[19.4698] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[19.4709] [ERR] event clickScreen inappropriate in current state walk
+[19.4722] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[19.9409] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[19.9442] [ERR] event clickScreen inappropriate in current state walk
+[19.9479] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[20.4564] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[20.4596] [ERR] event clickScreen inappropriate in current state walk
+[20.4628] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[20.8469] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[20.8501] [ERR] event clickScreen inappropriate in current state walk
+[20.8531] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[21.4887] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[21.4920] [ERR] event clickScreen inappropriate in current state walk
+[21.4952] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[22.0344] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[22.0379] [ERR] event clickScreen inappropriate in current state walk
+[22.0411] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[22.7069] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[22.7101] [ERR] event clickScreen inappropriate in current state walk
+[22.7133] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[23.5968] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[23.6000] [ERR] event clickScreen inappropriate in current state walk
+[23.6031] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[24.4564] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[24.4597] [ERR] event clickScreen inappropriate in current state walk
+[24.4629] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[24.9729] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[24.9763] [ERR] event clickScreen inappropriate in current state walk
+[24.9795] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[25.6433] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[25.6465] [ERR] event clickScreen inappropriate in current state walk
+[25.6496] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[26.0655] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[26.0687] [ERR] event clickScreen inappropriate in current state walk
+[26.0718] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[34.1122] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[34.1156] [ERR] event clickScreen inappropriate in current state walk
+[34.1188] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[35.1583] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[35.1615] [ERR] event clickScreen inappropriate in current state walk
+[35.1644] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[35.6399] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[35.6411] [ERR] event clickScreen inappropriate in current state walk
+[35.6424] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[36.2973] self.canAttack = false
+[36.3025] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[36.3039] [ERR] event clickScreen inappropriate in current state walk
+[36.3070] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[36.3421] self.canAttack = false
+[36.3734] self.canAttack = false
+[36.3755] self.canAttack = false
+[36.4666] begin
+[37.0008] self.canAttack = true
+[37.0032] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from idle to idle
+[37.0062] [ERR] event stop inappropriate in current state idle
+[37.0090] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:153: in function 'clickEnemy'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29>
+	[C]: in function 'postNotification'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:28: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:27>
+[37.0137] Enemy2:getCanAttack = true
+[37.0240] enemy:canAttack true
+[37.0250] Enemy2:getCanAttack = true
+[37.0766] self.canAttack = true
+[37.8913] self.canAttack = true
+[37.8943] Enemy2:getCanAttack = true
+[37.8963] enemy:canAttack true
+[37.8991] Enemy2:getCanAttack = true
+[37.9064] self.canAttack = true
+[37.9362] self.canAttack = true
+[37.9992] self.canAttack = true
+[38.0042] self.canAttack = true
+[38.8740] separate
+[38.9388] self.canAttack = false
+[38.9436] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[38.9451] [ERR] event clickScreen inappropriate in current state walk
+[38.9483] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[38.9703] self.canAttack = false
+[38.9723] self.canAttack = false
+[39.0295] self.canAttack = false
+[39.0320] self.canAttack = false
+[39.1539] begin
+[39.4384] self.canAttack = true
+[39.4417] Enemy2:getCanAttack = true
+[39.4434] enemy:canAttack true
+[39.4461] Enemy2:getCanAttack = true
+[39.4571] self.canAttack = true
+[39.4874] self.canAttack = true
+[39.5187] self.canAttack = true
+[39.5217] self.canAttack = true
+[39.8981] separate
+NOT FOUND BODY 08A82838
+[40.5193] EnemyDead
+[40.9593] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[40.9626] [ERR] event clickScreen inappropriate in current state walk
+[40.9659] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[41.3506] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[41.3543] [ERR] event clickScreen inappropriate in current state walk
+[41.3573] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[41.8317] begin
+[41.8963] self.canAttack = true
+[41.8992] Enemy1:getCanAttack = true
+[41.9015] enemy:canAttack true
+[41.9049] Enemy1:getCanAttack = true
+[41.9718] self.canAttack = true
+[42.6908] self.canAttack = true
+[42.6920] Enemy1:getCanAttack = true
+[42.6928] enemy:canAttack true
+[42.6938] Enemy1:getCanAttack = true
+[42.6960] self.canAttack = true
+[42.7840] self.canAttack = true
+[42.7865] self.canAttack = true
+[43.8177] self.canAttack = true
+[43.8214] Enemy1:getCanAttack = true
+[43.8235] enemy:canAttack true
+[43.8261] Enemy1:getCanAttack = true
+[43.8331] self.canAttack = true
+[43.8466] self.canAttack = true
+[43.9096] self.canAttack = true
+[43.9122] self.canAttack = true
+[43.9144] self.canAttack = true
+[44.2546] separate
+NOT FOUND BODY 08A82D38
+[44.8792] EnemyDead
+[53.1314] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[53.1346] [ERR] event clickScreen inappropriate in current state walk
+[53.1378] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[55.1118] begin
+[55.3237] self.canAttack = true
+[55.3249] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from idle to idle
+[55.3262] [ERR] event stop inappropriate in current state idle
+[55.3276] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:153: in function 'clickEnemy'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29>
+	[C]: in function 'postNotification'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:28: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:27>
+[55.3301] Enemy2:getCanAttack = true
+[55.3309] enemy:canAttack true
+[55.3322] Enemy2:getCanAttack = true
+[55.4140] self.canAttack = true
+[56.1420] self.canAttack = true
+[56.1433] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from idle to idle
+[56.1450] [ERR] event stop inappropriate in current state idle
+[56.1471] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:153: in function 'clickEnemy'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29>
+	[C]: in function 'postNotification'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:28: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:27>
+[56.1494] Enemy2:getCanAttack = true
+[56.1505] enemy:canAttack true
+[56.1517] Enemy2:getCanAttack = true
+[56.2401] self.canAttack = true
+[56.8952] self.canAttack = true
+[56.8984] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from idle to idle
+[56.9015] [ERR] event stop inappropriate in current state idle
+[56.9041] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:153: in function 'clickEnemy'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29>
+	[C]: in function 'postNotification'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:28: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy2.lua"]:27>
+[56.9090] Enemy2:getCanAttack = true
+[56.9272] enemy:canAttack true
+[56.9283] Enemy2:getCanAttack = true
+[57.0033] self.canAttack = true
+[57.3606] separate
+NOT FOUND BODY 08A82A38
+[57.9860] EnemyDead
+[58.4886] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event clickScreen, from walk to walk
+[58.4920] [ERR] event clickScreen inappropriate in current state walk
+[58.4952] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:41: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:35>
+[59.1866] begin
+[59.2520] self.canAttack = true
+[59.2553] Enemy1:getCanAttack = true
+[59.2575] enemy:canAttack true
+[59.2602] Enemy1:getCanAttack = true
+[59.2686] self.canAttack = true
+[59.3749] self.canAttack = true
+[59.9089] self.canAttack = true
+[59.9113] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from idle to idle
+[59.9146] [ERR] event stop inappropriate in current state idle
+[59.9179] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:153: in function 'clickEnemy'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29>
+	[C]: in function 'postNotification'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy1.lua"]:28: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy1.lua"]:27>
+[59.9406] Enemy1:getCanAttack = true
+[59.9418] enemy:canAttack true
+[59.9429] Enemy1:getCanAttack = true
+[59.9452] self.canAttack = true
+[59.9997] self.canAttack = true
+[60.0023] self.canAttack = true
+[60.6895] self.canAttack = true
+[60.6919] table: 0x0bb0ce18 [StateMachine] ERROR: error INVALID_TRANSITION_ERROR, event stop, from idle to idle
+[60.6950] [ERR] event stop inappropriate in current state idle
+[60.6979] 
+stack traceback:
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'onError_'
+	[string "framework.cc.components.behavior.StateMachine"]: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Player.lua"]:120: in function 'doEvent'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:153: in function 'clickEnemy'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/scenes/MainScene.lua"]:29>
+	[C]: in function 'postNotification'
+	[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy1.lua"]:28: in function <[string "D:/cocos2d-x/LearnLuaGame/scripts/app/roles/Enemy1.lua"]:27>
+[60.7029] Enemy1:getCanAttack = true
+[60.7119] enemy:canAttack true
+[60.7137] Enemy1:getCanAttack = true
+[60.7500] self.canAttack = true
+[61.1249] separate
+NOT FOUND BODY 08A82638
+[61.7510] EnemyDead
+CCPhysicsWorld::~CCPhysicsWorld(void)
