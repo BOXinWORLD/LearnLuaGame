@@ -124,7 +124,7 @@ function Player:getState()
     return self.fsm_:getState()
 end
 
-function Player:addStateMachine()
+function Player:addStateMachine() --状态机
     self.fsm_ = {}
     cc.GameObject.extend(self.fsm_)
     :addComponent("components.behavior.StateMachine")
