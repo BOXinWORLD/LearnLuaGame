@@ -8,7 +8,7 @@ end)
 function Enemy1:ctor()
 
     self.attack = 20
-    self.blood = 150
+    self.blood = 99
 
     local world = PhysicsManager:getInstance()
     self.body = world:createBoxBody(1, self:getContentSize().width/3, self:getContentSize().height*3/4)
@@ -26,7 +26,7 @@ function Enemy1:ctor()
 
     local function onTouch()
         CCNotificationCenter:sharedNotificationCenter():postNotification("CLICK_ENEMY", self)
-        return true
+        return false
     end
 
     self:addAnimation()
@@ -50,7 +50,7 @@ function Enemy1:addUI()
     self:addChild(self.progress)
 end
 
-function Enemy1:addAnimation()
+function Enemy1:addAnimation()--动画缓存
     local animationNames = {"walk", "attack", "dead", "hit"}
     local animationFrameNum = {3, 3, 3, 2}
 
@@ -60,6 +60,9 @@ function Enemy1:addAnimation()
         animate:setRestoreOriginalFrame(true)
         display.setAnimationCache("enemy1-" .. animationNames[i], animate)
     end
+
+    local idle=display.newAnimation(display.newFrames("enemy1-1-%d.png",1,1),0.1)
+    display.setAnimationCache("enemy1-stop",idle)
 end
 
 function Enemy1:getCanAttack()
@@ -69,14 +72,62 @@ function Enemy1:getCanAttack()
 end
 
 function Enemy1:idle()
+    if self.moveAction then
+        self:stopAction(self.moveAction)
+        self.moveAction = nil
+    end        
     transition.stopTarget(self)
+    transition.playAnimationOnce(self,display.getAnimationCache("enemy1-stop"))
+end
+
+function Enemy1:walkTo(pos, callback)
+
+    local function moveStop()--结束的回调
+        self:doEvent("stop")
+        if callback then
+            callback()
+        end
+    end
+
+    if self.moveAction then
+        self:stopAction(self.moveAction)
+        self.moveAction = nil
+        transition.stopTarget(self)
+    end
+    --当前位置
+    local currentPos = CCPoint(self:getPosition())
+    --目标位置    
+    local destPos = CCPoint(pos.x-40, pos.y)
+    -- 转向 并且图片偏移 两个方向都改锚点来适配
+    if pos.x < currentPos.x then
+        self:setFlipX(false)
+        self:setAnchorPoint(cc.p(0.65,0.5))--图片偏移 血条用的相对图片位置 因此也得更改
+        local size = self:getContentSize()
+        self.progress:setPosition(size.width*2/3, size.height + self.progress:getContentSize().height/2)
+    else
+        self:setFlipX(true)
+        self:setAnchorPoint(cc.p(0.35,0.5))
+        local size = self:getContentSize()
+        self.progress:setPosition(size.width*1/3, size.height + self.progress:getContentSize().height/2)
+    end
+    --距离
+    local posDiff = cc.PointDistance(currentPos, destPos)
+    --移动动作序列
+    self.moveAction = transition.sequence({CCMoveTo:create(5 * posDiff / display.width, CCPoint(pos.x-40,pos.y)), CCCallFunc:create(moveStop)})
+    transition.playAnimationForever(self, display.getAnimationCache("enemy1-walk"))
+    self:runAction(self.moveAction)
+    return true
 end
 
 function Enemy1:attack()
     local function attackEnd()
         self:doEvent("stop")
     end
-
+    if self.moveAction then
+        self:stopAction(self.moveAction)
+        self.moveAction = nil
+        transition.stopTarget(self)
+    end
     transition.playAnimationOnce(self, display.getAnimationCache("enemy1-attack"), false, attackEnd)
 end
 
@@ -89,7 +140,7 @@ function Enemy1:hit(attack)
 
     --受击结束后进行死亡判断
     local function hitEnd()
-        if self.blood==0 then 
+        if self.blood<=0 then 
             self:doEvent("beKilled")
             return
         else
@@ -134,9 +185,9 @@ function Enemy1:addStateMachine()
         -- 事件和状态转换
         events = {
             -- t1:clickScreen; t2:clickEnemy; t3:beKilled; t4:stop
-            {name = "clickScreen", from = {"idle", "attack"},   to = "walk" },
-            {name = "clickEnemy",  from = {"idle", "walk"},  to = "attack"},
-            {name = "beKilled", from = {"idle", "walk", "attack", "hit"},  to = "dead"},
+            {name = "clickScreen", from = {"idle"},   to = "walk" },
+            {name = "atk",  from = {"idle", "walk"},  to = "attack"},
+            {name = "beKilled", from = {"hit"},  to = "dead"},
             {name = "beHit", from = {"idle", "walk", "attack"}, to = "hit"},
             {name = "stop", from = {"walk", "attack", "hit"}, to = "idle"},
         },
@@ -144,8 +195,8 @@ function Enemy1:addStateMachine()
         -- 状态转变后的回调
         callbacks = {
             onidle = function (event) self:idle() end,
-            onattack = function (event) self:attackEnemy() end,
-            onhit = function (event) self:hit(event.args[1].attack) end,
+            onattack = function (event) self:attack() end,
+            onhit = function (event) self:hit(event.args[1].attack) end,--获取参数
             ondead = function (event) self:dead() end
         },
     })

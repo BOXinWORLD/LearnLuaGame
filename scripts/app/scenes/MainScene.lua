@@ -23,6 +23,8 @@ function MainScene:initScene()
 
     self.enemys = {}
 
+    local scheduler=CCDirector:sharedDirector():getScheduler()
+    scheduler:scheduleScriptFunc(function() self:enemyMove() end,1,false)--定时器 每秒触发敌人ai
     self:enterLevel(1)
     self:addTouchLayer()
 
@@ -71,8 +73,8 @@ function MainScene:addRoles()
 
     --物理世界与debug模式
     local world = PhysicsManager:getInstance()
-    self.worldDebug = world:createDebugNode()
-    self:addChild(self.worldDebug)
+    -- self.worldDebug = world:createDebugNode()
+    -- self:addChild(self.worldDebug)
     world:addCollisionScriptListener(handler(self, self.onCollision) ,
         CollisionType.kCollisionTypePlayer, CollisionType.kCollisionTypeEnemy)
 
@@ -97,7 +99,7 @@ function MainScene:addEnemys()
     self.enemys[#self.enemys + 1] = self.enemy2
 end
 
-function MainScene:onCollision(eventType, event)
+function MainScene:onCollision(eventType, event)--碰撞处理
     print(eventType)
     if eventType == 'begin' then
         self.canAttack = true
@@ -146,20 +148,20 @@ function MainScene:pause()
     self:addChild(layer)
 end
 
-function MainScene:clickEnemy(enemy)
+function MainScene:clickEnemy(enemy)--点击敌人
     print("self.canAttack = " .. tostring(self.canAttack))
-    if self.canAttack then
+    if self.canAttack then --碰撞可攻击且不在攻击状态
         if self.player:getState() ~= "attack" then
             self.player:doEvent("stop")
             self.player:doEvent("clickEnemy")
             print("enemy:canAttack " .. tostring(enemy:getCanAttack()))
             if enemy:getCanAttack() and enemy:getState() ~= 'hit' then
-                enemy:doEvent("beHit", {attack = self.player.attack})
+                enemy:doEvent("beHit", {attack = self.player.attack})--触发事件并传参
             end
         end
-    else
+    else--否则走向敌人
         local x,y = enemy:getPosition()
-        self.player:walkTo({x=x, y=y})
+        self.player:walkTo({x=x, y=y})local x,y = enemy:getPosition()
         if self.player:getState() ~= 'walk' then
             self.player:doEvent("clickScreen")
         end
@@ -173,6 +175,17 @@ function MainScene:removeEnemy(enemy)
         end
     end
 end
+
+function MainScene:enemyMove() --敌人移动ai
+    for i, v in ipairs(self.enemys) do
+        local state = v:getState()
+        if state == 'idle' or state == 'walk' then
+            local x, y = self.player:getPosition()
+            v:walkTo({x = x, y = y})
+        end
+    end
+end
+
 
 -- 显示进入下一关的按钮
 function MainScene:showNextLevelItem()

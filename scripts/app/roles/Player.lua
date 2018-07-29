@@ -101,7 +101,7 @@ function Player:attackEnemy()
     transition.playAnimationOnce(self, animation, false, attackEnd)
 end
 
-function Player:hit()
+function Player:hit(attack)
 
     local function hitEnd()
         self:doEvent("stop")
@@ -148,7 +148,7 @@ function Player:addStateMachine() --状态机
         callbacks = {
             onidle = function (event) self:idle() end,
             onattack = function (event) self:attackEnemy() end,
-            onhit = function (event) self:hit() end,
+            onhit = function (event) self:hit()(event.args[1].attack) end,
             ondead = function (event) self:dead() end
         },
     })

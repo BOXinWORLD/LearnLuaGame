@@ -8,7 +8,7 @@ end)
 function Enemy2:ctor()
 
     self.attack = 20
-    self.blood = 150
+    self.blood = 99
 
     local world = PhysicsManager:getInstance()
     self.body = world:createBoxBody(1, self:getContentSize().width/3, self:getContentSize().height*3/4)
@@ -26,7 +26,7 @@ function Enemy2:ctor()
 
     local function onTouch()
         CCNotificationCenter:sharedNotificationCenter():postNotification("CLICK_ENEMY", self)
-        return true
+        return false
     end
 
     self:addAnimation()
@@ -60,6 +60,9 @@ function Enemy2:addAnimation()
         animate:setRestoreOriginalFrame(true)
         display.setAnimationCache("enemy2-" .. animationNames[i], animate)
     end
+
+    local idle=display.newAnimation(display.newFrames("enemy2-1-%d.png",1,1),0.1)
+    display.setAnimationCache("enemy2-stop",idle)
 end
 
 function Enemy2:getCanAttack()
@@ -69,7 +72,52 @@ function Enemy2:getCanAttack()
 end
 
 function Enemy2:idle()
+    if self.moveAction then
+        self:stopAction(self.moveAction)
+        self.moveAction = nil  
+    end
     transition.stopTarget(self)
+    transition.playAnimationOnce(self,display.getAnimationCache("enemy2-stop"))
+
+end
+
+function Enemy2:walkTo(pos, callback)
+
+    local function moveStop()--结束的回调
+        self:doEvent("stop")
+        if callback then
+            callback()
+        end
+    end
+
+    if self.moveAction then
+        self:stopAction(self.moveAction)
+        self.moveAction = nil
+        transition.stopTarget(self)
+    end
+    --当前位置
+    local currentPos = CCPoint(self:getPosition())
+    --目标位置    
+    local destPos = CCPoint(pos.x+40, pos.y)
+    -- 转向 并且图片偏移 两个方向都改锚点来适配
+    if pos.x < currentPos.x then
+        self:setFlipX(false)
+        self:setAnchorPoint(cc.p(0.65,0.5))
+        local size = self:getContentSize()
+        self.progress:setPosition(size.width*2/3, size.height + self.progress:getContentSize().height/2)
+    else
+        self:setFlipX(true)
+        self:setAnchorPoint(cc.p(0.35,0.5))
+        local size = self:getContentSize()
+        self.progress:setPosition(size.width*1/3, size.height + self.progress:getContentSize().height/2)
+    end
+    --距离
+    local posDiff = cc.PointDistance(currentPos, destPos)
+    --移动动作序列
+    self.moveAction = transition.sequence({CCMoveTo:create(5 * posDiff / display.width, CCPoint(pos.x+40,pos.y)), CCCallFunc:create(moveStop)})
+    transition.playAnimationForever(self, display.getAnimationCache("enemy2-walk"))
+    self:runAction(self.moveAction)
+    return true
 end
 
 function Enemy2:attack()
@@ -89,7 +137,7 @@ function Enemy2:hit(attack)
 
     --受击结束后进行死亡判断
     local function hitEnd()
-        if self.blood==0 then 
+        if self.blood<=0 then 
             self:doEvent("beKilled")
             return
         else
@@ -135,8 +183,8 @@ function Enemy2:addStateMachine()
         events = {
             -- t1:clickScreen; t2:clickEnemy; t3:beKilled; t4:stop
             {name = "clickScreen", from = {"idle", "attack"},   to = "walk" },
-            {name = "clickEnemy",  from = {"idle", "walk"},  to = "attack"},
-            {name = "beKilled", from = {"idle", "walk", "attack", "hit"},  to = "dead"},
+            {name = "atk",  from = {"idle", "walk"},  to = "attack"},
+            {name = "beKilled", from = {"hit"},  to = "dead"},
             {name = "beHit", from = {"idle", "walk", "attack"}, to = "hit"},
             {name = "stop", from = {"walk", "attack", "hit"}, to = "idle"},
         },
@@ -144,7 +192,7 @@ function Enemy2:addStateMachine()
         -- 状态转变后的回调
         callbacks = {
             onidle = function (event) self:idle() end,
-            onattack = function (event) self:attackEnemy() end,
+            onattack = function (event) self:attack() end,
             onhit = function (event) self:hit(event.args[1].attack) end,
             ondead = function (event) self:dead() end
         },
