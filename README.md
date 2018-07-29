@@ -11,3 +11,4 @@ CCNotificationCenter 消息中心<br>
 Quick的状态机相关 各状态回调函数处理<br>
 Progress血条 按钮 菜单等简单ui<br>
 ***
+![](https://github.com/BOXinWORLD/LearnLuaGame/raw/master/1.gif)
