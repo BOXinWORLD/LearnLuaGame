@@ -10,4 +10,6 @@ CCPhysicsWorld 物理引擎 碰撞盒子相关 与精灵绑定 碰撞判断<br>
 CCNotificationCenter 消息中心<br>
 Quick的状态机相关 各状态回调函数处理<br>
 Progress血条 按钮 菜单等简单ui<br>
+scheduler计时器相关 scheduleScriptFunc定时处理<br>
 ***
+![](https://github.com/BOXinWORLD/LearnLuaGame/raw/master/1.gif)
